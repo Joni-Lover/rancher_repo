@@ -1,0 +1,5 @@
+name: Did-jenkins
+description: |
+    Docker-in-Docker with Jenkins-swarm
+version: 0.1
+category: Continuous Integration

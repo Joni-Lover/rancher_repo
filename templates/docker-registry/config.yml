@@ -1,0 +1,5 @@
+name: Docker-registry
+description: |
+    Docker registry
+version: 0.1
+category: Continuous Integration

@@ -1,0 +1,7 @@
+.catalog:
+  name: did-jenkins
+  version: 0.1
+  description: |
+    Docker-in-Docker with Jenkins-swarm
+did-jenkins:
+  scale: 1
