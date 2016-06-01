@@ -14,7 +14,7 @@ docker-registry:
     - docker-cache
   environment:
     SETTINGS_FLAVOR: local
-    STORAGE_PATH: /var/lib/docker/registry
+    STORAGE_PATH: /var/lib/registry
     SEARCH_BACKEND: sqlalchemy
     CACHE_REDIS_HOST: docker-cache
     CACHE_REDIS_PORT: 6379
@@ -22,9 +22,9 @@ docker-registry:
     CACHE_LRU_REDIS_PORT: 6379
 docker-storage:
   image: busybox
+  labels:
+    io.rancher.container.start_once: true
   volumes:
-    - /var/lib/docker/registry
-  command:
-    - 'true'
+    - /var/lib/registry
 docker-cache:
   image: redis
