@@ -3,7 +3,7 @@
   version: 0.1
   description: |
     Docker-in-Docker with Jenkins-swarm
-questions:
+  questions:
     - variable: user
       label: "User to run swarm process"
       description: |
