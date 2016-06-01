@@ -11,9 +11,7 @@ docker-registry:
   volumes_from:
     - docker-storage
   environment:
-    REGISTRY_SETTINGS_FLAVOR: local
     REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
-    REGISTRY_SEARCH_BACKEND: sqlalchemy
 docker-storage:
   image: busybox
   labels:
