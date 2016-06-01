@@ -1,4 +1,4 @@
-name: Docker-registry
+name: Docker registry
 description: |
     Docker registry
 version: 0.1

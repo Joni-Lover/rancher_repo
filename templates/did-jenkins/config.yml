@@ -1,4 +1,4 @@
-name: Did-jenkins
+name: Did Jenkins
 description: |
     Docker-in-Docker with Jenkins-swarm
 version: 0.1

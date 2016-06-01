@@ -5,6 +5,7 @@ docker-registry:
   labels:
     io.rancher.sidekicks: docker-storage,docker-cache
     io.rancher.container.hostname_override: container_name
+    io.rancher.scheduler.affinity:host_label_soft: docker=registry
   links:
     - docker-cache
     - docker-storage
@@ -24,6 +25,6 @@ docker-storage:
   volumes:
     - /var/lib/docker/registry
   command:
-    - true
+    - 'true'
 docker-cache:
   image: redis
