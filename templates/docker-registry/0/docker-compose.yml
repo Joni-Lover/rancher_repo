@@ -6,8 +6,8 @@ docker-registry:
     io.rancher.sidekicks: docker-storage,docker-cache
     io.rancher.container.hostname_override: container_name
   links:
-    - cache
-    - storage
+    - docker-cache
+    - docker-storage
   volumes_from:
     - docker-storage
     - docker-cache
