@@ -1,5 +1,5 @@
 .catalog:
-  name: Docker-registry
+  name: Docker registry
   version: 0.1
   description: |
     Docker registry

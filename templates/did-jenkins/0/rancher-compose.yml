@@ -1,5 +1,5 @@
 .catalog:
-  name: Did jenkins
+  name: Did Jenkins
   version: 0.1
   description: |
     Docker-in-Docker with Jenkins-swarm
