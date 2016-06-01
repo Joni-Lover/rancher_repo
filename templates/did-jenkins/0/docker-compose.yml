@@ -1,5 +1,5 @@
 did-jenkins:
-  image: "did-jenkins"
+  image: "jonilover/did-jenkins"
   user: "${user}"
   labels:
     io.rancher.scheduler.global: "true"
