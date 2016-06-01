@@ -1,30 +1,23 @@
 docker-registry:
-  image: registry:2
+  image: registry:2.4.1
   ports:
     - "5000:5000"
   labels:
-    io.rancher.sidekicks: docker-storage,docker-cache
+    io.rancher.sidekicks: docker-storage
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.affinity:host_label_soft: docker=registry
   links:
-    - docker-cache
     - docker-storage
   volumes_from:
     - docker-storage
-    - docker-cache
   environment:
-    SETTINGS_FLAVOR: local
-    STORAGE_PATH: /var/lib/registry
-    SEARCH_BACKEND: sqlalchemy
-    CACHE_REDIS_HOST: docker-cache
-    CACHE_REDIS_PORT: 6379
-    CACHE_LRU_REDIS_HOST: docker-cache
-    CACHE_LRU_REDIS_PORT: 6379
+    REGISTRY_SETTINGS_FLAVOR: local
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+    REGISTRY_SEARCH_BACKEND: sqlalchemy
 docker-storage:
   image: busybox
   labels:
     io.rancher.container.start_once: true
+    io.rancher.container.pull_image: always
   volumes:
     - /var/lib/registry
-docker-cache:
-  image: redis
