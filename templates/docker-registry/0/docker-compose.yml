@@ -23,6 +23,7 @@ docker-storage:
   image: busybox
   volumes:
     - /var/lib/docker/registry
-  command: [true]
+  command:
+    - true
 docker-cache:
   image: redis
