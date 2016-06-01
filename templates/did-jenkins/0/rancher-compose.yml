@@ -37,5 +37,3 @@
       required: true
       description: |
         Service that is running Jenkins CI server
-did-jenkins:
-  scale: 1
