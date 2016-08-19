@@ -1,0 +1,5 @@
+name: TEST
+description: |
+  test
+version: 0
+category: Continuous Integration

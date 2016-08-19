@@ -1,0 +1,11 @@
+test:
+  image: "busybox"
+  tty: true
+  stdin_open: true
+  labels:
+    io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
+  environment:
+    KOPF_SERVER_NAME: 'es.dev'
+    RRRRR: ${testtest}
+    PLG: ${plugins}
+  entrypoint: /bin/sh
