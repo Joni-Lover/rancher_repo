@@ -15,6 +15,8 @@ jenkins-plugins:
   labels:
     io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
     io.rancher.container.start_once: true
+  environment:
+    PLG: ${plugins}
 jenkins-datavolume:
   image: "busybox"
   volumes:
