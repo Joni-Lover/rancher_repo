@@ -1,0 +1,196 @@
+.catalog:
+  name: Jenkins
+  version: 2.7.2
+  description: |
+    Jenkins CI management server.
+  questions:
+  - variable: "container_tag"
+    type: "string"
+    label: "Jenkins version / container tag"
+    description: "Which tag should rancher use for set-up Jenkins?"
+    default: 2.7
+    required: true
+  - variable: "PORT"
+    type: "int"
+    label: "Port Number"
+    description: "Which port should Jenkins listen on?"
+    default: 8080
+    required: true
+  - variable: "plugins"
+    type: "multiline"
+    label: "List of Plugins"
+    description: |
+      List of plugins in the format <plugin_name>[:<version>]
+      one entry per line.
+    default: |
+      credentials:1.24
+      external-monitor-job:1.4
+      subversion:2.5.3
+      cvs:2.12
+      uno-choice:1.4
+      ssh-credentials:1.11
+      translation:1.12
+      ldap:1.11
+      matrix-project:1.6
+      pam-auth:1.2
+      windows-slaves:1.1
+      javadoc:1.3
+      matrix-auth:1.2
+      mailer:1.16
+      antisamy-markup-formatter:1.3
+      junit:1.9
+      ssh-slaves:1.10
+      script-security:1.15
+      maven-plugin:2.12
+      ant:1.2
+      cloudbees-folder:4.10
+      terminate-ssh-processes-plugin:1.0
+      rebuild:1.25
+      findbugs:4.62
+      thinBackup:1.7.4
+      workflow-job:1.10
+      progress-bar-column-plugin:1.0
+      build-pipeline-plugin:1.4.8
+      jquery-ui:1.0.2
+      copyartifact:1.36.1
+      workflow-aggregator:1.10
+      sectioned-view:1.19
+      authorize-project:1.1.0
+      build-view-column:0.2
+      python:1.2
+      persistent-parameter:1.1
+      github-api:1.69
+      audit-trail:2.2
+      pathignore:0.6
+      xunit:1.97
+      scm-sync-configuration:0.0.8
+      compact-columns:1.10
+      clone-workspace-scm:0.6
+      conditional-buildstep:1.3.3
+      build-history-metrics-plugin:1.2
+      unique-id:2.1.0
+      build-flow-plugin:0.18
+      workflow-support:1.10
+      git-server:1.6
+      workflow-api:1.10
+      async-http-client:1.7.8
+      crap4j:0.9
+      git-parameter:0.4.0
+      ivy:1.25
+      ssh:2.4
+      docker-build-publish:1.0.1
+      startup-trigger-plugin:2.4
+      dry:2.42
+      config-file-provider:2.9.3
+      violation-columns:1.6
+      cloverphp:0.4
+      github:1.13.3
+      repository-connector:1.1.2
+      build-blocker-plugin:1.7.1
+      scm-api:0.2
+      jdepend:1.2.4
+      mapdb-api:1.0.6.0
+      mercurial:1.54
+      stash-pullrequest-builder:1.4.2
+      groovy-postbuild:2.2.2
+      throttle-concurrents:1.8.4
+      nested-view:1.14
+      workflow-durable-task-step:1.10
+      workflow-step-api:1.10
+      analysis-collector:1.45
+      python-wrapper:1.0.3
+      stashNotifier:1.8
+      all-changes:1.3
+      versionnumber:1.5
+      icon-shim:2.0.1
+      token-macro:1.10
+      svnpublisher:0.1
+      validating-string-parameter:2.3
+      job-restrictions:0.4
+      custom-tools-plugin:0.4.4
+      warnings:4.50
+      dynamic_extended_choice_parameter:1.0.1
+      gradle:1.24
+      extra-columns:1.15
+      build-timeout:1.15
+      git:2.4.0
+      description-setter:1.10
+      console-column-plugin:1.5
+      pmd:3.42
+      envfile:1.2
+      hudson-pview-plugin:1.8
+      scripted-cloud-plugin:0.12
+      docker-custom-build-environment:1.6.1
+      extended-choice-parameter:0.52
+      email-ext:2.40.5
+      build-name-setter:1.5
+      toolenv:1.1
+      ownership:0.7
+      dashboard-view:2.9.6
+      phing:0.13.3
+      aws-java-sdk:1.10.16
+      delivery-pipeline-plugin:0.9.7
+      repository:1.2
+      jobConfigHistory:2.12
+      pegdown-formatter:1.3
+      analysis-core:1.74
+      systemloadaverage-monitor:1.2
+      grails:1.7
+      tasks:4.46
+      swarm:2.0
+      plot:1.9
+      node-iterator-api:1.5
+      git-client:1.19.0
+      timestamper:1.7.2
+      configure-job-column-plugin:1.0
+      workflow-basic-steps:1.10
+      promoted-builds:2.23
+      monitoring:1.57.0
+      build-token-root:1.3
+      workflow-cps-global-lib:1.10
+      workflow-cps:1.10
+      jshint-checkstyle:3.36
+      envinject:1.92.1
+      active-directory:1.41
+      pwauth:0.4
+      metrics:3.1.2
+      ssh-agent:1.8
+      create-fingerprint:1.2
+      role-strategy:2.2.0
+      docker-commons:1.2
+      http_request:1.8.8
+      groovy:1.27
+      violations:0.7.11
+      downstream-ext:1.8
+      workflow-scm-step:1.10
+      shelve-project-plugin:1.5
+      dynamicparameter:0.2.0
+      artifactory:2.3.1
+      durable-task:1.6
+      view-job-filters:1.27
+      plain-credentials:1.1
+      multiple-scms:0.5
+      scriptler:2.7
+      jquery:1.11.2-0
+      gravatar:2.1
+      ruby-runtime:0.12
+      shiningpanda:0.22
+      cvs-tag:1.7
+      ansicolor:0.4.1
+      disk-usage:0.28
+      checkstyle:3.43
+      postbuild-task:1.8
+      ws-cleanup:0.23
+      dynamic-axis:1.0.3
+      parameterized-trigger:2.29
+      covcomplplot:1.1.1
+      nodejs:0.2.1
+      matrix-combinations-parameter:1.0.9
+      authentication-tokens:1.2
+      jira:2.0.2
+      run-condition:1.0
+      job-dsl:1.39
+      docker-traceability:1.1
+      nodelabelparameter:1.5.1
+      buildgraph-view:1.1.1
+      s3:0.8

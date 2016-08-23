@@ -1,0 +1,27 @@
+jenkins-primary:
+  image: "jenkins:${container_tag}"
+  ports:
+    - "${PORT}:8080"
+  labels:
+    io.rancher.sidekicks: jenkins-plugins,jenkins-datavolume
+    io.rancher.container.hostname_override: container_name
+    io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
+  volumes_from:
+    - jenkins-plugins
+    - jenkins-datavolume
+  entrypoint: /usr/share/jenkins/rancher/jenkins.sh
+jenkins-plugins:
+  image: "jonilover/jenkins-plugins:latest"
+  labels:
+    io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
+    io.rancher.container.start_once: true
+  environment:
+    PLG: ${plugins}
+jenkins-datavolume:
+  image: "busybox"
+  volumes:
+    - /var/jenkins_home
+  labels:
+    io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
+    io.rancher.container.start_once: true
+  entrypoint: ["chown", "-R", "1000:1000", "/var/jenkins_home"]
