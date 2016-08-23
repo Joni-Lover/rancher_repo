@@ -11,7 +11,7 @@ jenkins-primary:
     - jenkins-datavolume
   entrypoint: /usr/share/jenkins/rancher/jenkins.sh
 jenkins-plugins:
-  image: "jonilover/jenkins-plugins:latest"
+  image: "jonilover/jenkins-plugins:${container_tag}"
   labels:
     io.rancher.scheduler.affinity:host_label_soft: role=jenkins-ci
     io.rancher.container.start_once: true
