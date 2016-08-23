@@ -2,7 +2,6 @@ did-jenkins:
   image: "jonilover/did-jenkins"
   user: "${user}"
   labels:
-    io.rancher.scheduler.global: "true"
     io.rancher.scheduler.affinity:host_label_soft: role=worker-ci
     io.rancher.container.hostname_override: container_name
   external_links:
@@ -12,5 +11,5 @@ did-jenkins:
     JENKINS_USER: "${jenkins_user}"
     SWARM_EXECUTORS: "${swarm_executors}"
   volumes:
-    - '/home/jenkins/workspace:/home/jenkins/workspace'
+    - '/app/jenkins/workspace:/home/jenkins/workspace'
     - '/tmp:/tmp'
