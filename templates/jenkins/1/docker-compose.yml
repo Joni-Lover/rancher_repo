@@ -1,5 +1,5 @@
 jenkins-primary:
-  image: "jenkins:${container_tag}"
+  image: "jonilover/jenkins:${container_tag}"
   ports:
     - "${PORT}:8080"
   labels:
